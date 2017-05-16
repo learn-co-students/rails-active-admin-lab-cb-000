@@ -2581,3 +2581,514 @@ Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.9ms)
 
 
 Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-08 10:45:44 -0500
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/Johnson/dev/learn-co/rails-active-admin-lab-cb-000/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/Johnson/dev/learn-co/rails-active-admin-lab-cb-000/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/Johnson/dev/learn-co/rails-active-admin-lab-cb-000/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/Johnson/dev/learn-co/rails-active-admin-lab-cb-000/config/environment.rb:5)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/Johnson/dev/learn-co/rails-active-admin-lab-cb-000/config/environment.rb:5)
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateAdminUsers (20170516233016)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "admin_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_email" ON "admin_users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_reset_password_token" ON "admin_users" ("reset_password_token")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170516233016"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateActiveAdminComments (20170516233021)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "active_admin_comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "namespace" varchar, "body" text, "resource_type" varchar, "resource_id" integer, "author_type" varchar, "author_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments" ("resource_type", "resource_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170516233021"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-05-16 23:30:37.775279"], ["updated_at", "2017-05-16 23:30:37.775279"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/Johnson/dev/learn-co/rails-active-admin-lab-cb-000/config/environment.rb:5)
+Started GET "/" for ::1 at 2017-05-16 16:34:26 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArtistsController#index as HTML
+Completed 406 Not Acceptable in 350ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (ArtistsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.0.3) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
+actionpack (5.0.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.0.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.0.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.3) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.3) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.3) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.3) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.3) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.3) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.3) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.3) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.3) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.3) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.3) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.3) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.3) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.3) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.3) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.3) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.3) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.3) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.3) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.3) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.3) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.3) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.3) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.3) lib/rails/engine.rb:522:in `call'
+rack (2.0.3) lib/rack/handler/webrick.rb:86:in `service'
+/Users/Johnson/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/Johnson/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/Johnson/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /Users/Johnson/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Johnson/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Johnson/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.7ms)
+  Rendering /Users/Johnson/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Johnson/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/Johnson/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Johnson/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (14.9ms)
+  Rendered /Users/Johnson/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (131.1ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/Johnson/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/Johnson/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/Johnson/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendering /Users/Johnson/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/Johnson/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Johnson/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendering /Users/Johnson/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Johnson/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendering /Users/Johnson/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/Johnson/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers__ohnson__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__382233247126931899_70112252290460 at /Users/Johnson/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/Johnson/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (337.0ms)
+  Rendering /Users/Johnson/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/Johnson/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendering /Users/Johnson/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/Johnson/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/Johnson/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (599.4ms)
+Started GET "/admin" for ::1 at 2017-05-16 16:34:28 -0700
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 11ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for ::1 at 2017-05-16 16:34:33 -0700
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /Users/Johnson/.rvm/gems/ruby-2.4.0/bundler/gems/activeadmin-fdcfa545a64b/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/Johnson/.rvm/gems/ruby-2.4.0/bundler/gems/activeadmin-fdcfa545a64b/app/views/active_admin/devise/shared/_links.erb (1.7ms)
+  Rendered /Users/Johnson/.rvm/gems/ruby-2.4.0/bundler/gems/activeadmin-fdcfa545a64b/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (61.2ms)
+Completed 200 OK in 8726ms (Views: 8711.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/admin/login" for ::1 at 2017-05-16 16:35:00 -0700
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M1Ht/NsU+F4ke5sbz6djRsrr40f25NnTtXYOzcsJWVVs8jTtTQ4aCcFOb0qWLx/0WUPdZ6l2V9a6Eo6GsWqaBw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.8ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.8ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M1Ht/NsU+F4ke5sbz6djRsrr40f25NnTtXYOzcsJWVVs8jTtTQ4aCcFOb0qWLx/0WUPdZ6l2V9a6Eo6GsWqaBw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /Users/Johnson/.rvm/gems/ruby-2.4.0/bundler/gems/activeadmin-fdcfa545a64b/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/Johnson/.rvm/gems/ruby-2.4.0/bundler/gems/activeadmin-fdcfa545a64b/app/views/active_admin/devise/shared/_links.erb (3.6ms)
+  Rendered /Users/Johnson/.rvm/gems/ruby-2.4.0/bundler/gems/activeadmin-fdcfa545a64b/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (68.5ms)
+Completed 200 OK in 425ms (Views: 315.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for ::1 at 2017-05-16 16:35:07 -0700
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tz8pz7TZw0tHV72v8Sxs0lYVVa1LMbWj+NPfqWwu1zfonPDeIsMhHKJiSf6opBBgxb1rjRSjO6b3t1/iFk0UZQ==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tz8pz7TZw0tHV72v8Sxs0lYVVa1LMbWj+NPfqWwu1zfonPDeIsMhHKJiSf6opBBgxb1rjRSjO6b3t1/iFk0UZQ==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /Users/Johnson/.rvm/gems/ruby-2.4.0/bundler/gems/activeadmin-fdcfa545a64b/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/Johnson/.rvm/gems/ruby-2.4.0/bundler/gems/activeadmin-fdcfa545a64b/app/views/active_admin/devise/shared/_links.erb (1.1ms)
+  Rendered /Users/Johnson/.rvm/gems/ruby-2.4.0/bundler/gems/activeadmin-fdcfa545a64b/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (29.7ms)
+Completed 200 OK in 238ms (Views: 138.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for ::1 at 2017-05-16 16:35:25 -0700
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3PkDhJi0RsG+n5MX6cLJVmqPBpz6eCavBL/yZQ0T8xWDWtqVDq6klluqZ0awSrXk+Sc4vKXqqKoL23Iud3AwRw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3PkDhJi0RsG+n5MX6cLJVmqPBpz6eCavBL/yZQ0T8xWDWtqVDq6klluqZ0awSrXk+Sc4vKXqqKoL23Iud3AwRw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /Users/Johnson/.rvm/gems/ruby-2.4.0/bundler/gems/activeadmin-fdcfa545a64b/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/Johnson/.rvm/gems/ruby-2.4.0/bundler/gems/activeadmin-fdcfa545a64b/app/views/active_admin/devise/shared/_links.erb (1.7ms)
+  Rendered /Users/Johnson/.rvm/gems/ruby-2.4.0/bundler/gems/activeadmin-fdcfa545a64b/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (33.4ms)
+Completed 200 OK in 278ms (Views: 167.9ms | ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/Johnson/dev/learn-co/rails-active-admin-lab-cb-000/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mSong Load (0.7ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "songs" WHERE "songs"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "songs" WHERE "songs"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "songs" WHERE "songs"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "songs" WHERE "songs"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "songs" WHERE "songs"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "songs" WHERE "songs"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "songs" WHERE "songs"."id" = ?[0m  [["id", 7]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "songs" WHERE "songs"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "The Killers"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "The Killers"], ["created_at", "2017-05-16 23:35:40.656171"], ["updated_at", "2017-05-16 23:35:40.656171"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at", "artist_id") VALUES (?, ?, ?, ?)[0m  [["title", "Mr. Brightside"], ["created_at", "2017-05-16 23:35:40.677866"], ["updated_at", "2017-05-16 23:35:40.677866"], ["artist_id", 5]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "The Killers"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at", "artist_id") VALUES (?, ?, ?, ?)[0m  [["title", "Jenny Was a Friend of Mine"], ["created_at", "2017-05-16 23:35:40.685153"], ["updated_at", "2017-05-16 23:35:40.685153"], ["artist_id", 5]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "Tommy Tutone"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Tommy Tutone"], ["created_at", "2017-05-16 23:35:40.698657"], ["updated_at", "2017-05-16 23:35:40.698657"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at", "artist_id") VALUES (?, ?, ?, ?)[0m  [["title", "Jenny"], ["created_at", "2017-05-16 23:35:40.701273"], ["updated_at", "2017-05-16 23:35:40.701273"], ["artist_id", 6]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "Daft Punk"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Daft Punk"], ["created_at", "2017-05-16 23:35:40.705378"], ["updated_at", "2017-05-16 23:35:40.705378"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at", "artist_id") VALUES (?, ?, ?, ?)[0m  [["title", "Around the World"], ["created_at", "2017-05-16 23:35:40.708226"], ["updated_at", "2017-05-16 23:35:40.708226"], ["artist_id", 7]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "Daft Punk"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at", "artist_id") VALUES (?, ?, ?, ?)[0m  [["title", "Harder, Better, Faster, Stronger"], ["created_at", "2017-05-16 23:35:40.711398"], ["updated_at", "2017-05-16 23:35:40.711398"], ["artist_id", 7]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "Pixies"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Pixies"], ["created_at", "2017-05-16 23:35:40.714326"], ["updated_at", "2017-05-16 23:35:40.714326"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at", "artist_id") VALUES (?, ?, ?, ?)[0m  [["title", "Where is My Mind?"], ["created_at", "2017-05-16 23:35:40.716266"], ["updated_at", "2017-05-16 23:35:40.716266"], ["artist_id", 8]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "Pixies"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at", "artist_id") VALUES (?, ?, ?, ?)[0m  [["title", "Gigantic"], ["created_at", "2017-05-16 23:35:40.720453"], ["updated_at", "2017-05-16 23:35:40.720453"], ["artist_id", 8]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mArtist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT ?[0m  [["name", "Pixies"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at", "artist_id") VALUES (?, ?, ?, ?)[0m  [["title", "Monkey Gone to Heaven"], ["created_at", "2017-05-16 23:35:40.724332"], ["updated_at", "2017-05-16 23:35:40.724332"], ["artist_id", 8]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$10$7PS2P6FOUWo/i8SxSnUTeuZXydnDf1Iw45/oYC1L8T3j8WH.FcOaO"], ["created_at", "2017-05-16 23:35:40.850950"], ["updated_at", "2017-05-16 23:35:40.850950"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/Johnson/dev/learn-co/rails-active-admin-lab-cb-000/config/environment.rb:5)
+Started POST "/admin/login" for ::1 at 2017-05-16 16:35:55 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3PkDhJi0RsG+n5MX6cLJVmqPBpz6eCavBL/yZQ0T8xWDWtqVDq6klluqZ0awSrXk+Sc4vKXqqKoL23Iud3AwRw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "admin_users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admin_users"."id" = ?[0m  [["current_sign_in_at", "2017-05-16 23:35:55.353198"], ["last_sign_in_at", "2017-05-16 23:35:55.353198"], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2017-05-16 23:35:55.354279"], ["id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 195ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/admin" for ::1 at 2017-05-16 16:36:00 -0700
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/Johnson/.rvm/gems/ruby-2.4.0/bundler/gems/activeadmin-fdcfa545a64b/app/views/active_admin/page/index.html.arb
+  Rendered /Users/Johnson/.rvm/gems/ruby-2.4.0/bundler/gems/activeadmin-fdcfa545a64b/app/views/active_admin/page/index.html.arb (673.8ms)
+Completed 200 OK in 685ms (Views: 679.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/active_admin.self-8d9871a9ce41e533d9d16d091885cab2df7583a4459cfbb080372d9735900e7b.css?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/active_admin/print.self-89cd618551efca446d94f32cc16a0d5c32905f1d48bd7733dcdeae2b75f8c86d.css?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/version.self-c8e3d1203da26ea7efdf83c1eabb3f0ba55cb68e463f5ccf0d77bd15ce6a8e61.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/widget.self-fca20bcec06d192f97cffa6e734e24360e227237b8ae7d7e7e60754df7d5444f.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/escape-selector.self-43e4d61501e4ffb1ecba387affbae1eb3e1c863ab0b0e71897851cddd246e50e.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/widgets/controlgroup.self-0b7409f97114a33de116bd5429e9df199cbdea3f276d8bd725c4c2c60f244711.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/keycode.self-ad63cd20acf49dd333bbbc537454d7d475bd610eb5b88de0dca009f0c3d314b1.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/form.self-711978b53107be2d9ef1b7369beb151b229cefa8c1405a056d3c34262d5b477e.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/form-reset-mixin.self-3a447942586b5719fdd7f1d1a3ac0da9e757a0eb8f4a7cb145f6deb820d2dc54.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/widgets/datepicker.self-2af0dec09da99d687c31fc224e940687a4eb3694e7b38b0871bba475cad86120.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/widgets/button.self-659b51f6fb5303f90ed8cf551509063770a50168a15795ba834b08f8bf2e0ce0.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/labels.self-c0448a3cb597a9a9429be814ab0e9ed2a14d85604555b4cff897adf3f0415f38.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/widgets/checkboxradio.self-60f68cb16012ef210c931076ada2d65d54a8c74a2dc71ce383af758460f8b686.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/ie.self-163eb039dcb1e0c3471b7d91386eabb8753da6906e84824c019f9ff56bdb83a6.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/widgets/mouse.self-f0790a202dcf54fab051e71b042335d5346f9cceb0f645223c1dab93f349a04b.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/plugin.self-d8f576c8e073ca51f095505f47bd09d306b875404cd90afcbb6338287cfb0247.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/data.self-2067c82e6fe39a9cba5623206a5dc28d5c60d26b95cd100855b78cacf72865b8.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/scroll-parent.self-38e26a71a450a29fb63425e8f589a7046862f927eb0a1dbf6a6c44da05196d2e.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/safe-active-element.self-a1f1a1a7dae3269ce03f6fffb2dcc9b4a7490f5d546c65d54417bec3be24b668.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/safe-blur.self-2cc24c46132d51c7724f6371154241b0a81c9bae5d5681d8f62b01ce46236726.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/widgets/draggable.self-42c3eda0b49f105628cea7580fe38c7ed77467cee384bb2c4e095a2bd0a172e6.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/disable-selection.self-5675f71f2fbbc6857ea700ba843af748b50dbc0150cc87932a7d05ec016bb659.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/widgets/resizable.self-1a46c2f5b876918e02bf979080e56f57846590cd880721bca5058e84f7f60bae.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/position.self-1b49c8c521e67a4a88bfdad6b4d944d33686d25009a0e40a1e170acdd7b6962a.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/tabbable.self-f3f62ceed772d3a325cebd6a03221f8a8cb02c6150f4feba738c6525a2953690.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/focusable.self-426e99e67d1f1bd4cb444fd878ee63a6de1f5d1d61451e43022c86214b9eec64.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/unique-id.self-66e85ac85cd0b6b8b1bb89369fc65f608f716869dc0930862a8d421a57a9580a.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/widgets/dialog.self-2bd687f9580c0be4213c50b4bb1211c28ceedb045eba954e63d40bfbb4d1affd.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/widgets/sortable.self-6e5e1f07a29b5a89ec1d359363d2800904e3ae548a38ab2f8eded36746d1adbe.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/active_admin/jquery_ui.self-75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/active_admin/base.self-ab2cb3098b53fe7d229937d768d701e8f4013f2a5aea7988d8f2149fa40426db.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/jquery-ui/widgets/tabs.self-b7f60535e992224ca66c3f11dc943eba9ef42a9605241e27b9dba24c7efb287e.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/active_admin/lib/checkbox-toggler.self-ab6f686db7db58fd7f370cd6f7a6d7abe6884b8d2a144f42a744c2276587b457.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/active_admin/lib/batch_actions.self-fbed82dc1e31cf860056cce6c02f5bc5831ad5343d68ac3ab17471c9e05e9195.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/active_admin/lib/dropdown-menu.self-8ccb356121a1c40094bb429d6cfac85d9c8ad114fb93730892d9df9986730a0a.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/active_admin/lib/flash.self-8f05a5d9328ea28fca100b057787fbfb567986513c5f1735ea48fad8f9571c10.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/active_admin/lib/per_page.self-94323c49402595a22bdea01b8dc3f8103e290d300238ebd49efa26d76d7ee117.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/active_admin/lib/has_many.self-ece319debdc01ca5096ae8ac6c130ffc0decab382543b4b94e18591375d3d3bb.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/active_admin/lib/modal_dialog.self-5dfc6e87bae26cd4a021eb86951d3691ed07e6d2bf242a8eb65dc6965e12096c.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.self-f5200d732ec9ffd4ee8fd1fe11524ad7b54a67f6c0ef447a29d119ece2dcecdb.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/active_admin/ext/jquery.self-da8dafbbe883092bcae73f35a8caf4ae6170fe7d8130ae7039a233f9b509c757.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/active_admin/initializers/batch_actions.self-f5c360e8640b40f00640f6e5c7cfe0addeb244ed72e1a9828c52919515d23cf1.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/active_admin/initializers/datepicker.self-f8ac66c85afd35ee1555c09a2418efc7a7930e1f6dd783461379c2bb2184f80e.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/active_admin/ext/jquery-ui.self-f96f2ec2a32c4bc4da4292cc74bddeca0bb223d81a421c98c4d613632860945e.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/active_admin/initializers/filters.self-9b9312d6bed532db668c5417a009b7fb7caf58f33299783ed02c2c72340a498a.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/active_admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/assets/active_admin/initializers/tabs.self-65de8b1688d4f8782c04bf07ba6314d3c8b33b9391a482a07214ac4df99dd904.js?body=1" for ::1 at 2017-05-16 16:36:01 -0700
+Started GET "/admin/artists" for ::1 at 2017-05-16 16:36:05 -0700
+Processing by Admin::ArtistsController#index as HTML
+  [1m[36mAdminUser Load (0.6ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/Johnson/.rvm/gems/ruby-2.4.0/bundler/gems/activeadmin-fdcfa545a64b/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "artists" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "artists" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "artists"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "artists" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mSong Load (0.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  Rendered /Users/Johnson/.rvm/gems/ruby-2.4.0/bundler/gems/activeadmin-fdcfa545a64b/app/views/active_admin/resource/index.html.arb (221.6ms)
+Completed 200 OK in 257ms (Views: 243.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/admin/artists/new" for ::1 at 2017-05-16 16:36:08 -0700
+Processing by Admin::ArtistsController#new as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/Johnson/.rvm/gems/ruby-2.4.0/bundler/gems/activeadmin-fdcfa545a64b/app/views/active_admin/resource/new.html.arb
+  Rendered /Users/Johnson/.rvm/gems/ruby-2.4.0/bundler/gems/activeadmin-fdcfa545a64b/app/views/active_admin/resource/new.html.arb (136.5ms)
+Completed 200 OK in 151ms (Views: 147.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/admin/artists" for ::1 at 2017-05-16 16:36:14 -0700
+Processing by Admin::ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZKs41jJx9F++58Q8OoWiLo8ypSB2FzHAsOqhFLm1W7nGkb7r5LOs+pZ3OQF8BTS4oFiV04L7hqAzpRewkga/ug==", "artist"=>{"name"=>"Mayday"}, "commit"=>"Create Artist"}
+  [1m[36mAdminUser Load (0.6ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Mayday"], ["created_at", "2017-05-16 23:36:14.174979"], ["updated_at", "2017-05-16 23:36:14.174979"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/artists/9
+Completed 302 Found in 44ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/admin/artists/9" for ::1 at 2017-05-16 16:36:14 -0700
+Processing by Admin::ArtistsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering /Users/Johnson/.rvm/gems/ruby-2.4.0/bundler/gems/activeadmin-fdcfa545a64b/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 9 AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Artist"], ["namespace", "admin"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = 9 AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Artist"], ["namespace", "admin"]]
+  Rendered /Users/Johnson/.rvm/gems/ruby-2.4.0/bundler/gems/activeadmin-fdcfa545a64b/app/views/active_admin/resource/show.html.arb (141.2ms)
+Completed 200 OK in 157ms (Views: 150.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/artists" for ::1 at 2017-05-16 16:36:20 -0700
+Processing by Admin::ArtistsController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/Johnson/.rvm/gems/ruby-2.4.0/bundler/gems/activeadmin-fdcfa545a64b/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "artists" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "artists" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "artists"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "artists" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  Rendered /Users/Johnson/.rvm/gems/ruby-2.4.0/bundler/gems/activeadmin-fdcfa545a64b/app/views/active_admin/resource/index.html.arb (169.3ms)
+Completed 200 OK in 182ms (Views: 177.7ms | ActiveRecord: 1.0ms)
+
+
