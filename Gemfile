@@ -9,7 +9,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'faker'
 gem 'devise'
 gem 'activeadmin'
-gem 'cancancan'
 
 group :development, :test do
   gem 'pry'
